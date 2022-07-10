@@ -10,8 +10,10 @@ def myFunction():
             for i in range(0, len(list1)):
                 if int(list1[i]) % 2 == 0:
                     evens.append(list1[i])
+                    evens.sort()
                 else:
                     odds.append(list1[i])
+                    odds.sort()
             print("Your list of numbers: ", list1)
             if len(evens) == 0:
                 print("No even numbers detected.")
@@ -27,6 +29,7 @@ def myFunction():
                 userInp = int(userInp)
                 if userInp not in list(list1):
                     list1.append(userInp)
+                    list1.sort()
             except ValueError:
                 print("Error: You have entered a non integer or a decimal fraction number.")
 
